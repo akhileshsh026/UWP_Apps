@@ -26,7 +26,10 @@
                 <RowDefinition Height="50"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <TextBox Margin="37,8,0,10.4" BorderBrush="BurlyWood" TextWrapping="Wrap" Text="{Binding _greeting, Mode=TwoWay}" d:LayoutOverrides="Height" HorizontalAlignment="Left" Width="287" Background="#66F10E0E"/>
+            <TextBox Margin="37,8,0,10.4" BorderBrush="BurlyWood" 
+                     TextWrapping="Wrap" Text="{Binding _greeting, Mode=TwoWay}" 
+                     d:LayoutOverrides="Height" HorizontalAlignment="Left" Width="287" 
+                     Background="#66F10E0E"/>
         </Grid>
 
     </Grid>
