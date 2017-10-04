@@ -11,7 +11,7 @@
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="{Binding Month, Mode=OneWay}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24"/>
                 <TextBlock Text="{Binding Day, Mode=OneWay}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="31"/>
-                <TextBlock Text="{Binding NameAsString, Mode=OneWay}" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <ItemsControl ItemsSource="{Binding Name, Mode=OneWay}"/>
             </StackPanel>
         </DataTemplate>
     </Page.Resources>
