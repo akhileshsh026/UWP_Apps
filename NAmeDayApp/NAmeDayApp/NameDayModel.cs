@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace NAmeDayApp
 {
-    class MainPageData
+    class NameDayModel
     {
-
     }
 }
