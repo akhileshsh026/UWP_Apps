@@ -30,7 +30,7 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <ListView ItemTemplate="{StaticResource NameDayModelTemplate}" 
-                      ItemsSource="{Binding NameDays}" Grid.Row="1"/>
+                      ItemsSource="{Binding NameDays}" Grid.Row="1" SelectedItem="{Binding SelectedNameDay, Mode=TwoWay, UpdateSourceTrigger=Default}"/>
         </Grid>
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
