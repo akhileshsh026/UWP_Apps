@@ -24,5 +24,22 @@ namespace NAmeDayApp
             }
         }
 
+        private NameDayModel _selectedNameDay;
+
+        public NameDayModel SelectedNameDay
+        {
+            get { return _selectedNameDay; }
+            set
+            {
+                _selectedNameDay = value;
+
+                if (value == null)
+                    _greeting = "Hello Hello please select value !";
+                else
+                    _greeting = "Hello" + value.NameAsString;
+            }
+        }
+
+
     }
 }
