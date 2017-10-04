@@ -1,0 +1,5 @@
+Seprates the Data Logic from UI.
+one- two way connections.
+UI to UI Binding.
+INotifyPropertyChaned   to work to tell UI every time when we change the Value.
+Use ObserbaleCollection
