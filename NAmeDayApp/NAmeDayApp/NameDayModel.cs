@@ -12,6 +12,13 @@ namespace NAmeDayApp
         public int Month { get; set; }
         public IEnumerable<string> Name { get; set; }
 
+        public NameDayModel(int Day, int Month, IEnumerable<string> Name)
+        {
+            this.Day = Day;
+            this.Month = Month;
+            this.Name = Name;
+        }
+
         public string NameAsString => string.Join(", ", Name);
             
     }
