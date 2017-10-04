@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
@@ -27,11 +28,11 @@ namespace NAmeDayApp
             }
         }
 
-        public List<NameDayModel> NameDays { get; set; }
+        public ObservableCollection<NameDayModel> NameDays { get; set; }
 
         public MainPageData()
         {
-            NameDays = new List<NameDayModel>();
+            NameDays = new ObservableCollection<NameDayModel>();
 
             for (int month = 1; month <= 12; month++)
             {
