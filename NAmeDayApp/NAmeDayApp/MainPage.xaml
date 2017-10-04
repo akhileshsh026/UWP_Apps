@@ -38,9 +38,9 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <TextBox Margin="37,8,0,10.4" BorderBrush="BurlyWood" 
-                     TextWrapping="Wrap" Text="{Binding _greeting, Mode=TwoWay}" 
+                     TextWrapping="Wrap" 
                      d:LayoutOverrides="Height" HorizontalAlignment="Left" Width="287" 
-                     Background="#66F10E0E"/>
+                     Background="#66F10E0E" Text="{Binding Greeting, Mode=TwoWay}"/>
         </Grid>
 
     </Grid>

@@ -1,14 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace NAmeDayApp
 {
-    class MainPageData
+    class MainPageData : INotifyPropertyChanged
     {
-        public string _greeting { get; set; } = "Hello World";
+        public string _greeting = "Hello Hello";
+
+        public string Greeting
+        {
+            get
+            {
+                return _greeting;
+            }
+            set
+            {
+                if (value == _greeting)
+                    return;
+
+                _greeting = value;
+                PropertyChanged?.Invoke(this,new PropertyChangedEventArgs(nameof(Greeting)));
+            }
+        }
 
         public List<NameDayModel> NameDays { get; set; }
 
@@ -18,13 +35,15 @@ namespace NAmeDayApp
 
             for (int month = 1; month <= 12; month++)
             {
-                NameDays.Add(new NameDayModel( 19, month, new string[] { "Akhilesh KS" }));
-                NameDays.Add(new NameDayModel(14, month, new string[] { "Bittu","Allwin","Cow" }));
+                NameDays.Add(new NameDayModel(19, month, new string[] { "Akhilesh KS" }));
+                NameDays.Add(new NameDayModel(14, month, new string[] { "Bittu", "Allwin", "Cow" }));
                 NameDays.Add(new NameDayModel(16, month, new string[] { "Akash", "Saurabh", "Kallu" }));
             }
         }
 
         private NameDayModel _selectedNameDay;
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
         public NameDayModel SelectedNameDay
         {
@@ -34,9 +53,9 @@ namespace NAmeDayApp
                 _selectedNameDay = value;
 
                 if (value == null)
-                    _greeting = "Hello Hello please select value !";
+                    Greeting = "Hello Hello please select value !";
                 else
-                    _greeting = "Hello" + value.NameAsString;
+                    Greeting = "Hello " + value.NameAsString;
             }
         }
 
