@@ -23,7 +23,7 @@
                 <RowDefinition Height="50"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <TextBox Margin="37,8,0,10.4" TextWrapping="Wrap" Text="TextBox" d:LayoutOverrides="Height" HorizontalAlignment="Left" Width="287"/>
+            <TextBox Margin="37,8,0,10.4" BorderBrush="BurlyWood" TextWrapping="Wrap" Text="TextBox" d:LayoutOverrides="Height" HorizontalAlignment="Left" Width="287" Background="#66F10E0E"/>
         </Grid>
 
     </Grid>
