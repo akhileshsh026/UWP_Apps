@@ -34,13 +34,17 @@ namespace NAmeDayApp
         {
             NameDays = new ObservableCollection<NameDayModel>();
 
-            //for (int month = 1; month <= 12; month++)
-            //{
-            //    _allNameDays.Add(new NameDayModel(19, month, new string[] { "Akhilesh KS" }));
-            //    _allNameDays.Add(new NameDayModel(14, month, new string[] { "Bittu", "Allwin", "Cow" }));
-            //    _allNameDays.Add(new NameDayModel(16, month, new string[] { "Akash", "Saurabh", "Kallu" }));
-            //}
-            //PerformFiltering();
+            if (Windows.ApplicationModel.DesignMode.DesignModeEnabled)   // diffreenciate between the runtime and design time data.
+            {
+                for (int month = 1; month <= 12; month++)
+                {
+                    _allNameDays.Add(new NameDayModel(19, month, new string[] { "Akhilesh KS" }));
+                    _allNameDays.Add(new NameDayModel(14, month, new string[] { "Bittu", "Allwin", "Cow" }));
+                    _allNameDays.Add(new NameDayModel(16, month, new string[] { "Akash", "Saurabh", "Kallu" }));
+                }
+                PerformFiltering();
+            }
+            else
             LoadData();
         }
 
