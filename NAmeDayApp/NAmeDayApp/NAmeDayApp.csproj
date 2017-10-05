@@ -100,6 +100,7 @@
     </Compile>
     <Compile Include="MainPageData.cs" />
     <Compile Include="NameDayModel.cs" />
+    <Compile Include="NameDayRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

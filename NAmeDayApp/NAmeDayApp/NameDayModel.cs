@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace NAmeDayApp
 {
-    class NameDayModel
+
+   public class NameDayModel
     {
-        public int Day { get;  }
-        public int Month { get;  }
-        public IEnumerable<string> Name { get; }
+        
+
+        public int Day { get; set; }
+        public int Month { get; set; }
+        public IEnumerable<string> Name { get; set; }
 
         public NameDayModel(int Day, int Month, IEnumerable<string> Name)
         {
@@ -20,7 +23,7 @@ namespace NAmeDayApp
         }
 
         public string NameAsString => string.Join(", ", Name);
-            
+        public NameDayModel() { }
     }
 
 }

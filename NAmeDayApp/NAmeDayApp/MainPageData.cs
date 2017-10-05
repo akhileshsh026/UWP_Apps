@@ -34,12 +34,19 @@ namespace NAmeDayApp
         {
             NameDays = new ObservableCollection<NameDayModel>();
 
-            for (int month = 1; month <= 12; month++)
-            {
-                _allNameDays.Add(new NameDayModel(19, month, new string[] { "Akhilesh KS" }));
-                _allNameDays.Add(new NameDayModel(14, month, new string[] { "Bittu", "Allwin", "Cow" }));
-                _allNameDays.Add(new NameDayModel(16, month, new string[] { "Akash", "Saurabh", "Kallu" }));
-            }
+            //for (int month = 1; month <= 12; month++)
+            //{
+            //    _allNameDays.Add(new NameDayModel(19, month, new string[] { "Akhilesh KS" }));
+            //    _allNameDays.Add(new NameDayModel(14, month, new string[] { "Bittu", "Allwin", "Cow" }));
+            //    _allNameDays.Add(new NameDayModel(16, month, new string[] { "Akash", "Saurabh", "Kallu" }));
+            //}
+            //PerformFiltering();
+            LoadData();
+        }
+
+        public async void LoadData()
+        {
+            _allNameDays = await NameDayRepository.GetAllNameDayAsync();
             PerformFiltering();
         }
 
